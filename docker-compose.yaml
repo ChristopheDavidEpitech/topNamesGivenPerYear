@@ -9,6 +9,8 @@ services:
       POSTGRES_DB: postgres
     ports:
       - 5432:5432
+    volumes:
+      - ./liste_des_prenoms.csv:/docker-entrypoint-initdb.d/liste_des_prenoms.csv
 
   adminer:
     image: adminer
