@@ -21,8 +21,7 @@ public class NameGivenController : ControllerBase
     {
         if (!IsValidName(name))
         {
-            return new List<ErrorMessage> { new ErrorMessage { Message = "Please provide a regular name format." } };
-            
+            return new List<ErrorMessage> { new ErrorMessage { Message = "Please provide a regular name format." } };            
         }
         if (sex != "M" && sex != "F" && sex != "")
         {
@@ -38,9 +37,9 @@ public class NameGivenController : ControllerBase
             WHERE rank <= 3
             ORDER BY annee, nombre DESC;
         ";
-        
         var parameters = new { name = name, sex = sex };
         IEnumerable<dynamic> result = conn.Query(cmd, parameters);
+        
         return result;   
     }
 
@@ -52,7 +51,7 @@ public class NameGivenController : ControllerBase
         return regex.IsMatch(name);
     }
     public class ErrorMessage
-{
-    public string? Message { get; set; }
-}
+    {
+        public string? Message { get; set; }
+    }
 }
