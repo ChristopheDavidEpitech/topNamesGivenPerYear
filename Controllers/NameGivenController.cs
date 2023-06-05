@@ -4,12 +4,11 @@ using Npgsql;
 using System.Data;
 using System.Text.RegularExpressions;
 
-
-
 namespace topNamesGivenPerYear.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[Produces("application/json")]
 public class NameGivenController : ControllerBase
 {
 

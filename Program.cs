@@ -1,6 +1,4 @@
-using System.Data;
-using Dapper;
-using Npgsql;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,23 +7,22 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Top names",
+        Description = "Get top 3 names given each year",
+        Contact = new OpenApiContact
+        {
+            Name = "Christophe David",
+            Url = new Uri("https://www.linkedin.com/in/christophe-david-17236b13a/")
+        }
+    });
+});
 
 var app = builder.Build();
-
-
-
-
-// var connString = "Host=localhost;Username=christophe;Password=test;Database=postgres";
-// IDbConnection conn = new NpgsqlConnection(connString);
-
-// // string createTableCmd = "CREATE TABLE IF NOT EXISTS name (id serial PRIMARY KEY, sexe varchar(1) NOT NULL, annee integer NOT NULL, prenoms varchar(100) NOT NULL);";
-// string checkSqlCmd = "SELECT COUNT(*) FROM name;";
-// marche pas pck  postrges  pas les droits de read
-// string importSqlCmd = "COPY name(sexe, annee, prenoms) FROM './liste_des_prenoms.csv' DELIMITER ';' CSV HEADER;";
-//Console.WriteLine("\\");
-// conn.Query(checkSqlCmd);
-
 
 if (app.Environment.IsDevelopment())
 {
