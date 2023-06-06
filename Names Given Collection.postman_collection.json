@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "b0b1f3ba-1ce3-4209-85d0-e7748132c6db",
+		"name": "Names Given Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18725078"
+	},
+	"item": [
+		{
+			"name": "With name and sex query",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "without query",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "with name only",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "with wrong name format",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5072/NameGiven?name=Chris7s7s7s",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5072",
+					"path": [
+						"NameGiven"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Chris7s7s7s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "with sex only",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5072/NameGiven?name=Chris7s7s7s",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5072",
+					"path": [
+						"NameGiven"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Chris7s7s7s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "with wrong sex format",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5072/NameGiven?name=Chris7s7s7s",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5072",
+					"path": [
+						"NameGiven"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Chris7s7s7s"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -26,7 +26,20 @@ psql -c "CREATE TABLE name (id serial PRIMARY KEY, sexe varchar(1) NOT NULL, ann
 psql -c "\copy name(sexe, annee, prenoms) FROM './database/liste_des_prenoms.csv' DELIMITER ';' CSV HEADER;" -U {user} test_technique
 psql -U {user} -f ./database/procedure.sql -d test_technique
 ```
+
 ## RUN the app 
 ```bash
 dotnet watch run
 ```
+
+## Routes
+GET /NameGiven
+2 optionnal params :
+    -name (5 char max, A-Z)
+    -sex (M or F)
+
+Example :
+http://localhost:5072/NameGiven?name=Chris&sex=M
+http://localhost:5072/NameGiven
+
+A postman collec is provided at ./Names Given Collection.postman_collection.json
