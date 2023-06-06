@@ -43,3 +43,5 @@ Example :
 * http://localhost:5072/NameGiven
 
 A postman collec is provided at ./Names Given Collection.postman_collection.json
+
+Or if you prefer the SwaggerUI : http://localhost:5072/swagger/index.html
