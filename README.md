@@ -39,7 +39,7 @@ GET /NameGiven
     -sex (M or F)
 
 Example :
-http://localhost:5072/NameGiven?name=Chris&sex=M
-http://localhost:5072/NameGiven
+* http://localhost:5072/NameGiven?name=Chris&sex=M
+* http://localhost:5072/NameGiven
 
 A postman collec is provided at ./Names Given Collection.postman_collection.json
