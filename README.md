@@ -17,8 +17,8 @@ Voici l’énoncé :
 
 ## DATABASE 
 First go to appsettings.json and change the connection string to match your Postgres database.
+Then run those commands.
 Make sure to replace {user} by yours.
-Then run those commands
 
 ```bash
 psql -U {user} -c "CREATE DATABASE test_technique" 
